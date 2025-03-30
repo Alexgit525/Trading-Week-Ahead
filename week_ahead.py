@@ -41,11 +41,19 @@ with tab3:
 
 # --- Weekly Index Performance ---
 with tab4:
-    st.subheader("📈 U.S. Indices: Weekly Performance (Fri vs Fri)")
+    st.subheader("📈 Major Indices: Weekly Performance (Fri vs Fri)")
     tickers = {
-        "S&P 500": "^GSPC",
-        "Nasdaq 100": "^NDX",
-        "Dow Jones": "^DJI"
+        "S&P 500 (US)": "^GSPC",
+        "Nasdaq 100 (US)": "^NDX",
+        "Dow Jones (US)": "^DJI",
+        "Hang Seng Index (HK)": "^HSI",
+        "HSCEI Index (HK)": "^HSCE",
+        "HSTECH Index (HK)": "^HSTECH",
+        "Shanghai Composite (CN)": "000001.SS",
+        "SSE 50 (CN)": "000016.SS",
+        "CSI 300 (CN)": "000300.SS",
+        "CSI 500 (CN)": "000905.SS",
+        "CSI 1000 (CN)": "000852.SS"
     }
 
     end_date = datetime.today()
