@@ -60,7 +60,7 @@ with tab4:
             previous_friday = fridays.index[-2]
             latest_close = fridays["Close"].iloc[-1]
             previous_close = fridays["Close"].iloc[-2]
-            change_pct = (latest_close - previous_close) / previous_close * 100
+            change_pct = float((latest_close - previous_close) / previous_close * 100)
             index_data[name] = {
                 "This Friday (Date)": latest_friday.strftime("%Y-%m-%d (%A)"),
                 "Last Friday (Date)": previous_friday.strftime("%Y-%m-%d (%A)"),
