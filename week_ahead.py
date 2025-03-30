@@ -63,7 +63,7 @@ with tab4:
             index_data[name] = {
                 "This Friday (Date)": latest_friday.strftime("%Y-%m-%d (%A)"),
                 "Last Friday (Date)": previous_friday.strftime("%Y-%m-%d (%A)"),
-                "Weekly % Change": f"{change_pct:+.2f}%"
+                "Weekly % Change": f"{change_pct:+.2f}%" if pd.notnull(change_pct) else "N/A"
             }
 
     if index_data:
