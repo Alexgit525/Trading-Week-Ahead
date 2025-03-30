@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import yfinance as yf
+import math
 from datetime import datetime, timedelta
 
 # Set page config
@@ -63,7 +64,7 @@ with tab4:
             index_data[name] = {
                 "This Friday (Date)": latest_friday.strftime("%Y-%m-%d (%A)"),
                 "Last Friday (Date)": previous_friday.strftime("%Y-%m-%d (%A)"),
-                "Weekly % Change": f"{change_pct:+.2f}%" if change_pct is not None and not pd.isna(change_pct) else "N/A"
+                "Weekly % Change": f"{change_pct:+.2f}%" if change_pct is not None and not math.isnan(change_pct) else "N/A"
             }
 
     if index_data:
